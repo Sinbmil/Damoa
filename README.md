@@ -104,5 +104,8 @@ if(isset($_POST['search'])){
 * 사용자는 단순히 이것을 보기만 하는 것이 아니라 카테고리별, 브랜드별, 가격대별, 별점별 등을 기준으로도 검색하여 선택의 폭을 줄일 수 있습니다.
 * 추가적으로 메인 페이지에서는 검색 엔진을 통해서 상품을 확인할 수 있습니다.
 
-### * 시연 영상 및 기타 정보는 Wiki에서 확인 바랍니다.
--> https://github.com/Sinbmil/Comprehensive-furniture-site/wiki
+# 4) 시연 영상
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/83913056/178137258-883967d4-705b-4a08-8f11-4bc565c7c171.gif">
+ <br>회원가입
+</p>
