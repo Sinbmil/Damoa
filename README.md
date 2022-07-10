@@ -34,4 +34,56 @@
 <hr/>
 
 # 3) 시스템 구현
+## 1. 개발 환경
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/83913056/170942888-82788db3-e569-4846-a65f-9247434f6aac.png">
+</p>
 
+## 2. 주요 기능 구현
+### [1] 공통 변수 선언
+```php
+<?php
+  include ('HTML/db_test.php');
+  $sql = "SELECT * FROM item WHERE 1 = 1";
+?>
+```
+* sql 변수에 아이템 테이블 정보를 가져온 후, 각 체크박스의 체크 유무를 확인하여 AND 연산자를 통해 SELECT 합니다.
+
+### [2] 체크박스 구현
+```php
+if(isset($_POST['brandCK'])){
+    if(in_array('all', $_POST['brandCK'])){
+        $text_Brand = " AND 1 = 1";
+    }
+    else{
+        $text_Brand = " AND brand IN (";
+        for($i=0; $i<count($_POST['brandCK']); $i++){
+            $setBrandCK = $_POST['brandCK'];
+
+            if($i > 0){
+                $text_Brand = $text_Brand.",";
+            }
+
+            $text_Brand = $text_Brand."'".$setBrandCK[$i]."'";
+        }
+        $text_Brand = $text_Brand.")";
+    }
+    // $sql_text_brand = "SELECT * FROM test WHERE 1 = 1".$text;
+    $sql = $sql.$text_Brand;
+}
+```
+
+* 브랜드는 다중선택이 가능하며 in_array()에 all을 사용하면서 브랜드 전체를 검색할 수 있도록 구현하였다.
+* $text_Brand = "AND 1= 1"을 해준 이유는 다른 브랜드를 선택하고 전체를 클릭했을 때도 전체 브랜드가 나타내기 하도록 위함이다.
+* 전체를 선택하지 않고 일부만 선택했을 때는 for문과 IN 연산자를 이용해서 브랜드가 체크된 값을 얻어오고 그 수량이 0보다 크면 중간에 콤마 표시를 해주면서 연결을 해준다. 
+  작은 따음표라던지 괄호를 위에서 말한 것처럼  점(.)을 사용해서 연결을 해준다.
+* <style="color: #6495ED">상단 코드는 브랜드별 체크박스 유무 확인이고 다른 것도 비슷하게 구현하였다.</style><br>
+
+<span style="color:yellow">노란 글씨입니다.</span>
+## 3. UI 구성 및 흐름
+* 우선, 사용자가 사용자 인증을 통한 회원가입 이후 로그인을 하게 되면, 메인 페이지로 이동하게 됩니다. 
+* 메인 페이지에 존재하는 상품들 중에서 사용자는 본인이 원하는 상품을 클릭하면 상품 페이지로 이동합니다.
+* 상품 페이지 내에서 구매하고 싶은 수량을 체크하고 장바구니에 담으면 서버를 통해 장바구니에 담은 상품을 볼 수 있게 됩니다.
+* 메인 페이지와 장바구니  페이지에서는 각 상품에 대한 브랜드, 가격, 별점 등을 확인할 수 있습니다.
+* 사용자는 단순히 이것을 보기만 하는 것이 아니라 카테고리별, 브랜드별, 가격대별, 별점별 등을 기준으로도 검색하여 선택의 폭을 줄일 수 있습니다.
+* 추가적으로 메인 페이지에서는 검색 엔진을 통해서 상품을 확인할 수 있습니다.
