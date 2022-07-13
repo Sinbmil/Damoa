@@ -109,3 +109,22 @@ if(isset($_POST['search'])){
  <img src="https://user-images.githubusercontent.com/83913056/178137258-883967d4-705b-4a08-8f11-4bc565c7c171.gif">
  <br>회원가입
 </p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/83913056/178754441-5bd9468e-f023-4275-b344-803d1bd8b6ad.gif">
+ <br>로그인
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/83913056/178754573-7bc203e5-8a40-4682-9147-e0881803590e.gif">
+ <br>카테고리
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/83913056/178754670-1bc7df92-2c70-4de8-9730-399081e1694d.gif">
+ <br>장바구니
+</p>
+
+<p align="center">
+  이외에도 상단의 낮은 가격순 / 높은 가격순 / 별점 낮은순 / 별점 높은순으로 검색할 수 있습니다.
+</p>
