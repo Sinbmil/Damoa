@@ -94,7 +94,7 @@ if(isset($_POST['search'])){
 
 ## 3. UI 구성 및 흐름
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/83913056/186617970-80471bb6-cf3e-45c6-9628-02987449be5a.JPG">
+  <img src="https://user-images.githubusercontent.com/83913056/186619849-758ba85d-510a-4292-915e-e957a438e3b7.JPG">
 </p>
 
 * 우선, 사용자가 사용자 인증을 통한 회원가입 이후 로그인을 하게 되면, 메인 페이지로 이동하게 됩니다. 
