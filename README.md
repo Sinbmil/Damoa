@@ -105,4 +105,4 @@ if(isset($_POST['search'])){
 * 추가적으로 메인 페이지에서는 검색 엔진을 통해서 상품을 확인할 수 있습니다.
 
 시연 영상 및 기타정보는 wiki에서 확인할 수 있습니다.<br>
--> https://github.com/Sinbmil/Comprehensive-furniture-site/wiki
+-> https://github.com/Sinbmil/Damoa/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%A2%85%ED%95%A9-%EA%B0%80%EA%B5%AC-%EC%82%AC%EC%9D%B4%ED%8A%B8
